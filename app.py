@@ -3,6 +3,8 @@ os.environ["GEMINI_API_KEY"] = ""
 import uuid
 import requests
 import streamlit as st
+if "GEMINI_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 from langgraph.types import Command
 from agent import build_agent
 from vision import scan_fridge_and_make_recipe
