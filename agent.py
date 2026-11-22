@@ -70,7 +70,7 @@ def build_agent():
             if GEMINI_KEY:
                 g_llm = ChatGoogleGenerativeAI(
                     model=gm,
-                    google_api_key="",
+                    google_api_key=GEMINI_KEY,
                     temperature=0.3,
                     max_output_tokens=3000,
                 )
